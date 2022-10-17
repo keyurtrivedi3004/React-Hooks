@@ -1,11 +1,13 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import UseStateHook from "./Components/Hooks/UseStateHook";
+import UseEffectHook from "./Components/Hooks/UseEffectHook";
+// import UseStateHook from "./Components/Hooks/UseStateHook";
 
 function App() {
   return (
     <div className="App">
-      <UseStateHook />
+      {/* <UseStateHook /> */}
+      <UseEffectHook />
     </div>
   );
 }
