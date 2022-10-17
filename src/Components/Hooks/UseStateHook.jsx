@@ -13,3 +13,7 @@ const UseStateHook = () => {
 };
 
 export default UseStateHook;
+
+
+// - The React useState Hook allows us to track state in a function component.
+// - React useState Hook used to chenge the state value in functional component
