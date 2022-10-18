@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 
 const UseEffectHook = () => {
   const [windowwidth, setWindowwidth] = useState(window.innerWidth);
@@ -15,3 +15,6 @@ const UseEffectHook = () => {
 };
 
 export default UseEffectHook;
+
+// useEffect() Hook allows you to perform side effect in Component
+// side effect like:- fetching data, directly updating the DOM and timers

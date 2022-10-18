@@ -36,3 +36,7 @@ function slowFunction(num) {
 }
 
 export default UseMemo;
+
+// the react useMemo() Hook return memoized value
+// useMemo() allows you to memoized expansive function so that you can avoid calling them on every render
+// useMemo() will only recompute the memoized value when one of te input has changed
