@@ -1,0 +1,55 @@
+<script>
+  //executor function
+  // promisses produce
+  const promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let roll_no = [1, 2, 3, 4, 5];
+      resolve(roll_no);
+      // reject("error while communicating");
+    }, 2000);
+  });
+  const getBiodata = (indexdata) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(
+        (indexdata) => {
+          let biodata = {
+            name: "keyur",
+            age: 24,
+          };
+          resolve(
+            `my roll no is ${indexdata} my name is ${biodata.name} and i am ${biodata.age} years old`
+          );
+        },
+        2000,
+        indexdata
+      );
+    });
+  };
+
+  //prommisses consume
+
+  //   promise1
+  //     .then((rollno) => {
+  //       console.log(rollno);
+  //       return getBiodata(rollno[1]);
+  //     })
+  //     .then((abc) => {
+  //       console.log(abc);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+
+  async function getData() {
+    const data = await promise1;
+    console.log(data);
+
+    const data1 = await getBiodata(data[1]);
+    console.log(data1);
+
+    return data1;
+  }
+
+  const data2 = getData();
+  console.log(data2);
+</script>
